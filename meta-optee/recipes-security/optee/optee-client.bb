@@ -9,7 +9,7 @@ PV = "2.0.0+git${SRCPV}"
 SRC_URI = "git://github.com/OP-TEE/optee_client.git"
 S = "${WORKDIR}/git"
 
-SRCREV = "88acd6bda5f9e19124fce0015fe64a6644eff036"
+SRCREV = "17d1addc465a667f375837cdbe4fa7ebac08539b"
 
 do_compile() {
     install -d ${D}${prefix}

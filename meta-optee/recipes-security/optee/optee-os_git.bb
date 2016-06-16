@@ -6,11 +6,13 @@ LIC_FILES_CHKSUM = "file://${S}/LICENSE;md5=69663ab153298557a59c67a60a743e5b"
 
 PV="2.0.0+git${SRCPV}"
 
-DEPENDS = "python-pycrypto-native"
+DEPENDS = "python-pycrypto-native python-wand-native"
 
 inherit deploy pythonnative
 
-SRCREV = "eb00c7b99f79964c8d08c88e94ab99f12c504ff9"
+export MAGICK_HOME="${STAGING_DIR_NATIVE}${prefix}"
+
+SRCREV = "8f46b8d05b22d1511a7d93dd9adafddf9251ab6a"
 SRC_URI = "git://github.com/OP-TEE/optee_os.git \
            file://0001-allow-setting-sysroot-for-libgcc-lookup.patch "
 
